@@ -1,7 +1,7 @@
 package com.example.tasksnotes.tasks;
 
 import com.example.tasksnotes.common.BaseEntity;
-import com.example.tasksnotes.notes.NoteEntity;
+import com.example.tasksnotes.notes.NotesEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,5 +29,5 @@ public class TaskEntity extends BaseEntity {
     private boolean done;
 
     @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
-    List<NoteEntity> notes;
+    List<NotesEntity> notes;
 }

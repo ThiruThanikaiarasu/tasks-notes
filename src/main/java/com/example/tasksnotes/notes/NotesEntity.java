@@ -3,9 +3,18 @@ package com.example.tasksnotes.notes;
 import com.example.tasksnotes.common.BaseEntity;
 import com.example.tasksnotes.tasks.TaskEntity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity(name = "notes")
-public class NoteEntity extends BaseEntity {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class NotesEntity extends BaseEntity {
 
     @Column(name= "title", nullable = false)
     private String title;
